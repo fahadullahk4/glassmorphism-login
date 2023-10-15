@@ -1,0 +1,136 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Gilroy;
+    box-sizing: border-box;
+}
+html,
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    padding: 0 10px;
+}
+
+body::before {
+    content: "";
+    width: 100%;
+    position: absolute;
+    height: 100%;
+    background: url("https://images.unsplash.com/photo-1682686581556-a3f0ee0ed556?ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2671&q=80");
+    background-position: center;
+    background-size: cover;
+}
+
+.main {
+    width: 400px;
+    border-radius: 8px;
+    padding: 30px;
+    text-align: center;
+    border: 1px solid #003e8e;
+    backdrop-filter: blur(25px);
+    -webkit-backdrop-filter: blur(9px);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+h2 {
+    font-size: 3vw;
+    margin-bottom: 3vw;
+    color: antiquewhite;
+}
+
+.input-field {
+    position: relative;
+    border-bottom: 1px solid #003e8e;
+    margin: 15px 0;
+}
+
+.input-field label {
+    position: absolute;
+    top: 55%;
+    left: 0;
+    font-size: 1.4vw;
+    pointer-events: none;
+    transform: translateY(-50%);
+    transition: 0.15s ease;
+    color: #00091b;
+    font-weight: 600;
+}
+
+.input-field input {
+    width: 100%;
+    height: 35px;
+    font-size: 1.35vw;
+    border: none;
+    outline: none;
+    background: transparent;
+    color: antiquewhite;
+}
+
+.input-field input:focus ~ label,
+.input-field input:valid ~ label {
+    font-size: 1.02vw;
+    transform: translateY(-120%);
+    top: 10px;
+}
+
+.remember-forgot-password {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 25px 0 35px 0;
+    color: antiquewhite;
+}
+
+#remember {
+    accent-color: #33bdfa;
+}
+
+.remember-forgot-password label {
+    display: flex;
+    align-items: center;
+}
+
+.remember-forgot-password label p {
+    margin-left: 8px;
+}
+
+.main a {
+    color: antiquewhite;
+    text-decoration: none;
+}
+
+.main a:hover {
+    text-decoration: underline;
+}
+
+button {
+    background: #33bdfa;
+    color: #000;
+    font-weight: 600;
+    border: none;
+    padding: 12px 20px;
+    cursor: pointer;
+    border-radius: 3px;
+    font-size: 16px;
+    border: 2px solid transparent;
+    transition: 0.3s ease;
+}
+
+button:hover {
+    color: antiquewhite;
+    border-color: antiquewhite;
+    background: rgba(255, 255, 255, 0.15);
+}
+
+.register {
+    text-align: center;
+    margin-top: 30px;
+    color: antiquewhite;
+}
